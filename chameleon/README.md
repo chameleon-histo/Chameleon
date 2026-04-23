@@ -7,7 +7,7 @@ Batch stain normalization for H&E and IHC brightfield histology images
 ![GitHub](https://img.shields.io/badge/GitHub-chameleon--histo-181717.svg?logo=github)
 ---
 
-![Chameleon screenshot](docs/main window.png)
+![Chameleon screenshot](docs/main_window.png)
 
 
 ---
@@ -41,7 +41,7 @@ output = (source − src_mean) / src_std × tgt_std + tgt_mean
 More conservative than histogram matching — shifts and scales the distribution without forcing a full shape match. Mode 4 builds the synthetic target by averaging LAB statistics across the entire batch.
 ---
 Pre-flight Inspector
-![Pre-flight Inspector](docs/preview screen.png)
+![Pre-flight Inspector](docs/preview_screen.png)
 
 Before running a full batch, click 🔍 Preview All Methods Before Running to open the inspector. It shows:
 The original image on the left
