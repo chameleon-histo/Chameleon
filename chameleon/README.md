@@ -2,21 +2,17 @@
 
 **Batch stain normalization for H\&E and IHC brightfield histology images**
 
-[!\[License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[!\[MATLAB](https://img.shields.io/badge/MATLAB-R2019b%2B-orange.svg)](https://www.mathworks.com/)
-[!\[Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
-\[!\[Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)]()
-[!\[GitHub](https://img.shields.io/badge/GitHub-chameleon--histo-181717.svg?logo=github)](https://github.com/chameleon-histo/Chameleon)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![MATLAB](https://img.shields.io/badge/MATLAB-R2019b%2B-orange.svg)
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)]()
+![GitHub](https://img.shields.io/badge/GitHub-chameleon--histo-181717.svg?logo=github)
+---
 
-\---
+![Chameleon screenshot](docs/main_window.png) 
 
+---
 
-
-!\[Chameleon screenshot](docs/main\_window.png) 
-
-
-
-\---
 
 ## Overview
 
@@ -24,7 +20,9 @@ Stain variability between slides, scanners, and batches is one of the most commo
 
 Available as both a **MATLAB** app (works in MATLAB Online) and a standalone **Python** application.
 
-\---
+NOTE: Chameleon will not correct for bad staining. The software is designed to normalized a batch of images to allow subsequent image segmentation to be performed without false positive or false negative detections due to image variations. 
+
+---
 
 ## Features
 
