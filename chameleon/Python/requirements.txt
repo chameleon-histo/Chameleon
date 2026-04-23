@@ -1,0 +1,5 @@
+PyQt6>=6.4
+matplotlib>=3.7
+numpy>=1.24
+scikit-image>=0.21
+pyinstaller>=5.0
