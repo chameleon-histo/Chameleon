@@ -65,7 +65,7 @@ More conservative than histogram matching — shifts and scales the distribution
 
 ## Pre-flight Inspector
 
-!\[Pre-flight Inspector](docs/preview_screen.png)
+![Pre-flight Inspector](docs/preview_screen.png) 
 
 Before running a full batch, click **🔍 Preview All Methods Before Running** to open the inspector. It shows:
 
