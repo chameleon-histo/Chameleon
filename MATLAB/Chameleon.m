@@ -4,7 +4,7 @@ classdef Chameleon < matlab.apps.AppBase
     %  Chameleon  –  Batch Stain Normalizer for RGB Histology Images
     %  Supports H&E, IHC, and general brightfield images.
     %
-    %  Four normalisation modes:
+    %  Four normalization modes:
     %    1. Histogram matching  → user reference image
     %    2. Histogram matching  → batch-average CDF
     %    3. Reinhard            → user reference image
@@ -17,7 +17,7 @@ classdef Chameleon < matlab.apps.AppBase
     %
     %  Outputs:
     %    • Normalised image files saved to output folder
-    %    • CSV log of per-image normalisation statistics
+    %    • CSV log of per-image normalization statistics
     % =====================================================================
 
     % =====================================================================
@@ -144,7 +144,7 @@ classdef Chameleon < matlab.apps.AppBase
             'Histogram Matching → Reference Image:  Match each image''s full RGB distribution to a single chosen reference slide. Best when you have a high-quality reference with ideal staining.', ...
             'Histogram Matching → Batch Average:  Build a theoretical mean histogram across all images, then match every image to that population average. No reference image needed.', ...
             'Reinhard → Reference Image:  Transfer LAB color statistics (mean + std per channel) from a reference image to each source. More conservative than histogram matching; lower artifact risk.', ...
-            'Reinhard → Batch-Average Synthetic Reference:  Compute mean LAB statistics across the entire batch to build a bias-free synthetic reference, then apply Reinhard normalisation to all images.' ...
+            'Reinhard → Batch-Average Synthetic Reference:  Compute mean LAB statistics across the entire batch to build a bias-free synthetic reference, then apply Reinhard normalization to all images.' ...
         }
     end
 
@@ -613,7 +613,7 @@ classdef Chameleon < matlab.apps.AppBase
             app.RefImageField.Enable   = onOff;
             app.BrowseRefButton.Enable = onOff;
             app.RunButton.BackgroundColor = app.AppColors.accent;
-            app.RunButton.Text            = '▶  Run Normalisation';
+            app.RunButton.Text            = '▶  Run Normalization';
         end
 
         % ── Theme ─────────────────────────────────────────────────────
@@ -702,7 +702,7 @@ classdef Chameleon < matlab.apps.AppBase
             app.TitleLabel = uilabel(app.HeaderPanel,'Position',[20 20 600 36], ...
                 'Text','Chameleon','FontSize',22,'FontWeight','bold','FontColor',c.accent);
             app.SubtitleLabel = uilabel(app.HeaderPanel,'Position',[20 5 820 18], ...
-                'Text','Four-mode histogram & Reinhard normalisation  |  Pre-flight inspector for H&E / IHC brightfield images', ...
+                'Text','Four-mode histogram & Reinhard normalization  |  Pre-flight inspector for H&E / IHC brightfield images', ...
                 'FontSize',10,'FontColor',c.textDim);
 
             % ── Status bar ────────────────────────────────────────────
@@ -796,7 +796,7 @@ classdef Chameleon < matlab.apps.AppBase
                 'Position',[110 y 80 22],'BackgroundColor',[0.10 0.13 0.18],'FontColor',c.text,'FontSize',10);
             y = y - 28;
             app.SaveLogCheckBox = uicheckbox(app.LeftPanel,'Position',[16 y 260 20], ...
-                'Text','Save CSV normalisation log','Value',true,'FontSize',10,'FontColor',c.text);
+                'Text','Save CSV normalization log','Value',true,'FontSize',10,'FontColor',c.text);
             y = y - 26;
             app.PreviewCheckBox = uicheckbox(app.LeftPanel,'Position',[16 y 200 20], ...
                 'Text','Show live preview during run','Value',true,'FontSize',10,'FontColor',c.text);
@@ -832,7 +832,7 @@ classdef Chameleon < matlab.apps.AppBase
                 'BackgroundColor',[0.10 0.22 0.16],'FontColor',[0.28 0.92 0.58], ...
                 'ButtonPushedFcn',createCallbackFcn(app,@PreviewBatchButtonPushed,true));
             app.RunButton = uibutton(app.LeftPanel,'push', ...
-                'Position',[16 16 184 40],'Text','▶  Run Normalisation', ...
+                'Position',[16 16 184 40],'Text','▶  Run Normalization', ...
                 'FontSize',12,'FontWeight','bold','BackgroundColor',c.accent,'FontColor',[1 1 1], ...
                 'ButtonPushedFcn',createCallbackFcn(app,@RunButtonPushed,true));
             app.CancelButton = uibutton(app.LeftPanel,'push', ...
