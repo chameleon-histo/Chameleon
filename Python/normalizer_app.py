@@ -606,7 +606,7 @@ class InspectorWindow(QWidget):
             f'Image {idx + 1} of {n}  —  {Path(self.image_paths[idx]).name}')
         self.prev_btn.setEnabled(idx > 0)
         self.next_btn.setEnabled(idx < n - 1)
-        self.status_lbl.setText('Computing normalisations…')
+        self.status_lbl.setText('Computing normalizations…')
         QApplication.processEvents()
 
         try:
@@ -761,7 +761,7 @@ class MainWindow(QMainWindow):
         vl = self._vbox()
         title = QLabel('Chameleon')
         title.setObjectName('title_lbl')
-        sub = QLabel('Four-mode histogram & Reinhard normalisation  |  Pre-flight inspector for H&E / IHC brightfield images')
+        sub = QLabel('Four-mode histogram & Reinhard normalization  |  Pre-flight inspector for H&E / IHC brightfield images')
         sub.setObjectName('subtitle_lbl')
         vl.addWidget(title)
         vl.addWidget(sub)
@@ -939,7 +939,7 @@ class MainWindow(QMainWindow):
         workers_box_hl.addStretch()
         opt_vl.addWidget(workers_box)
 
-        self.log_check = QCheckBox('Save CSV normalisation log')
+        self.log_check = QCheckBox('Save CSV normalization log')
         self.log_check.setChecked(True)
         opt_vl.addWidget(self.log_check)
 
@@ -995,7 +995,7 @@ class MainWindow(QMainWindow):
         vl.addWidget(self.preview_btn)
 
         btn_row = self._hbox()
-        self.run_btn = QPushButton('▶  Run Normalisation')
+        self.run_btn = QPushButton('▶  Run Normalization')
         self.run_btn.setObjectName('run_btn')
         self.run_btn.setFixedHeight(42)
         self.run_btn.clicked.connect(self._run)
@@ -1085,7 +1085,7 @@ class MainWindow(QMainWindow):
         'Match each image\'s full RGB distribution to a single chosen reference slide. Best when you have a high-quality reference with ideal staining.',
         'Build a theoretical mean histogram across all images, then match every image to that population average. No reference image needed.',
         'Transfer LAB color statistics (mean + std per channel) from a reference image to each source. More conservative than histogram matching; lower artifact risk.',
-        'Compute mean LAB statistics across the entire batch to build a bias-free synthetic reference, then apply Reinhard normalisation to all images.',
+        'Compute mean LAB statistics across the entire batch to build a bias-free synthetic reference, then apply Reinhard normalization to all images.',
     ]
 
     def _on_mode_changed(self, *_):
